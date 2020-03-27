@@ -1,4 +1,4 @@
-package OOP.part1;
+package OOP.part1.constructor;
 
 public class Person {
     private String firstName;
