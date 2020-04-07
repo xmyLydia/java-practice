@@ -2,7 +2,14 @@ package OOP.part1.inheritance;
 
 public class Main {
     public static void main(String[] args) {
-        Car car = new Car(3, "label");
-        System.out.println(car.getMaterial());
+        Circle circle = new Circle(3.75);
+        System.out.println("circle.radius= " + circle.getRadius());
+        System.out.println("circle.area= " + circle.getArea());
+        Cylinder cylinder = new Cylinder(5.55, 7.25);
+        System.out.println("cylinder.radius= " + cylinder.getRadius());
+        System.out.println("cylinder.height= " + cylinder.getHeight());
+        System.out.println("cylinder.area= " + cylinder.getArea());
+        System.out.println("cylinder.volume= " + cylinder.getVolume());
+
     }
 }
