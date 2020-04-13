@@ -8,4 +8,5 @@ fundamental practice for building up strong base and preparation for advanced ja
 6. static vs instance method (which to use)
 7. static vs instance variable (static: shared between instance)
 8. extends Object class
+9. composition vs inheritance
 
