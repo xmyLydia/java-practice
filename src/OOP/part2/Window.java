@@ -3,12 +3,12 @@ package OOP.part2;
 public class Window {
     private double width;
     private double height;
-    private String material;
+    private Glass glass;
 
-    public Window(double width, double height, String material) {
+    public Window(double width, double height, Glass glass ) {
         this.width = width;
         this.height = height;
-        this.material = material;
+        this.glass = glass;
     }
 
     public double getWidth() {
@@ -27,15 +27,15 @@ public class Window {
         this.height = height;
     }
 
-    private String getMaterial() {
-        return material;
+    public Glass getGlass() {
+        return glass;
     }
 
-    public void setMaterial(String material) {
-        this.material = material;
+    public void setGlass(Glass glass) {
+        this.glass = glass;
     }
 
     public void printWindowMaterialForRoom() {
-        System.out.println("window material: " + getMaterial());
+        System.out.println("window material: " + glass.getMaterial());
     }
 }

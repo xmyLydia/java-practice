@@ -12,6 +12,6 @@ public class Room {
     }
 
     public void getWindowMaterial() {
-        this.window.printWindowMaterialForRoom();
+        window.printWindowMaterialForRoom();
     }
 }
