@@ -9,4 +9,5 @@ fundamental practice for building up strong base and preparation for advanced ja
 7. static vs instance variable (static: shared between instance)
 8. extends Object class
 9. composition vs inheritance
+10. encapsulation: protected fields
 
