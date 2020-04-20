@@ -6,9 +6,8 @@ public class HealthyHamburger extends Hamburger {
     private static String sourceHealthyName = "sourceHealthyName";
     private static String healthyRollType = "Brown rye bread roll";
 
-    public HealthyHamburger(String breadRollType, int meat, double meatPrice) {
-        super(breadRollType, meat, meatPrice);
-        this.setBreadRollType(healthyRollType);
+    public HealthyHamburger(int meat, double meatPrice) {
+        super(healthyRollType, meat, meatPrice);
         this.setSourceHealthy(0);
         this.setSourceHealthyPrice(1);
     }

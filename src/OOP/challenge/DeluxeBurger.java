@@ -11,12 +11,13 @@ public class DeluxeBurger extends Hamburger {
     private int drinks;
     private double drinksPrice;
 
-    public DeluxeBurger(String breadRollType, int meat, double meatPrice) {
-        super(breadRollType, meat, meatPrice);
-        this.setChips(0);
-        this.setChipsPrice(1);
-        this.setDrinks(0);
-        this.setDrinksPrice(1);
+    public DeluxeBurger(String breadRollType, int meat, double meatPrice, int chips, double chipsPrice,
+                        int drink, double drinksPrice) {
+        super("Delux bread type", 1, 2);
+        this.setChipsPrice(chipsPrice);
+        this.setDrinksPrice(drinksPrice);
+        this.setChips(chips);
+        this.setDrinks(drink);
     }
 
     public int getChips() {
@@ -53,14 +54,7 @@ public class DeluxeBurger extends Hamburger {
 
     @Override
     public void add(String name, int amount) {
-        super.add(name, amount);
-        if (name.equals(chipsName)) {
-            this.chips += amount;
-        } else if (name.equals(drinksName)) {
-            this.drinks += amount;
-        } else {
-            System.out.println("Not available in deluxe");
-        }
+        System.out.println("we can't add anything");
     }
 
     @Override
