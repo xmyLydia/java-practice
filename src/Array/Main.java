@@ -15,10 +15,10 @@ public class Main {
 
     public static void main(String[] args) {
         Main main = new Main();
-        main.getIntegers();
+        int[] array = main.getIntegers();
 
         main.printArray();
-        main.sortArray();
+        main.sortArray(array);
         main.printArray();
     }
 
@@ -28,15 +28,17 @@ public class Main {
         }
     }
 
-    public void getIntegers() {
+    public int[] getIntegers() {
+        int[] array = new int[5];
         Scanner sc = new Scanner(System.in);
         for (int i = 0; i < 5; i++) {
             int input = sc.nextInt();
             array[i] = input;
         }
+        return array;
     }
 
-    public void sortArray() {
+    public void sortArray(int[] array) {
         for (int i = 0; i < array.length - 1; i++) {
             for (int j = 0; j < array.length - i - 1; j++) {
                 if (array[j] < array[j + 1]) {
