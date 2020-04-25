@@ -11,4 +11,4 @@ fundamental practice for building up strong base and preparation for advanced ja
 9. composition vs inheritance
 10. encapsulation: protect fields
 11. polymorphism: unique functionality in inherited class
-12. array, bubble sorting (while flag + for loop)
+12. array, bubble sorting (while flag + for loop), common error (index out of bounds)
