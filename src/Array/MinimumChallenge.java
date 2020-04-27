@@ -6,9 +6,10 @@ import java.util.Scanner;
  * @author mingyux
  */
 public class MinimumChallenge {
+    private static final Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) {
         MinimumChallenge minimumChallenge = new MinimumChallenge();
-        Scanner scanner = new Scanner(System.in);
         System.out.println("input how many integer user need to input:");
         int count = scanner.nextInt();
         int[] array = minimumChallenge.readIntegers(count);
@@ -17,7 +18,6 @@ public class MinimumChallenge {
     }
 
     public int[] readIntegers(int count) {
-        Scanner scanner = new Scanner(System.in);
         int[] array = new int[count];
         for (int i = 0; i < count; i++) {
             array[i] = scanner.nextInt();
@@ -26,7 +26,7 @@ public class MinimumChallenge {
     }
 
     public int findMin(int[] array) {
-        int temp;
+        int temp = Integer.MAX_VALUE;
         if (array != null) {
             for (int i = 0; i < array.length - 1; i++) {
                 if (array[i] < array[i + 1]) {
@@ -37,6 +37,6 @@ public class MinimumChallenge {
             }
             return array[array.length - 1];
         }
-        return 1234567;
+        return temp;
     }
 }
