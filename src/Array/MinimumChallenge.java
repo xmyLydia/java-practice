@@ -1,7 +1,5 @@
 package Array;
 
-import sun.util.locale.provider.JRELocaleProviderAdapter;
-
 import java.util.Scanner;
 
 /**
