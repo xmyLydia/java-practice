@@ -6,6 +6,7 @@ package Array;
 public class ReverserChallenge {
     public static void main(String[] args) {
         int[] array = new int[]{1, 3, 4, 5, 7, 9};
+        // Or use Array.toString(array) to print the array
         printArray(array);
         System.out.println("after reverse");
         reverse(array);
