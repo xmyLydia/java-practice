@@ -14,3 +14,4 @@ fundamental practice for building up strong base and preparation for advanced ja
 12. array, bubble sorting (while flag + for loop), common error (index out of bounds)、
 13. reference type and value type
 14. arrayList (advantage: automatic re-sizing)
+15. arrayList (crud operations), scanner.nextLine() and scanner.nextInt()
