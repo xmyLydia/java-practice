@@ -49,9 +49,9 @@ public class MobilePhone {
         }
     }
 
-    public int queryName(String phoneNumber) {
+    public int queryName(String name) {
         for (Contact contact : contacts) {
-            if (contact.getPhoneNumber().equals(phoneNumber)) {
+            if (contact.getName().equals(name)) {
                 return contacts.indexOf(contact);
             }
         }
@@ -67,28 +67,28 @@ public class MobilePhone {
             }
             //add new contract
             case 2: {
-                System.out.print("input name");
+                System.out.print("input name: ");
                 String name = scanner.nextLine();
-                scanner.nextLine();
-                System.out.print("input phoneNumber");
+                System.out.print("input phoneNumber: ");
                 String phoneNumber = scanner.nextLine();
                 contacts.add(new Contact(name, phoneNumber));
                 break;
             }
             //update contract
             case 3: {
-                System.out.println("input name:");
+                System.out.println("input name: ");
                 String name = scanner.nextLine();
-                System.out.println("input new PhoneNumber");
+                System.out.println("input new PhoneNumber: ");
                 String phoneNumber = scanner.nextLine();
                 modify(name, phoneNumber);
                 break;
             }
             //remove contract
             case 4: {
-                System.out.println("input name");
+                System.out.println("input name: ");
                 String name = scanner.nextLine();
                 remove(name);
+                break;
             }
             //quit
             case 5:
@@ -112,11 +112,13 @@ public class MobilePhone {
         System.out.println("input your choice:");
         //read input from user
         int choice = scanner.nextInt();
+        scanner.nextLine();
         while (choice != 5) {
             mobilePhone.processCommand(choice);
             menu.forEach(System.out::println);
             System.out.println("input choice:");
             choice = scanner.nextInt();
+            scanner.nextLine();
         }
     }
 }
