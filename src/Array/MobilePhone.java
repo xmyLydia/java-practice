@@ -27,6 +27,8 @@ public class MobilePhone {
     public void store(Contact contact) {
         if (!isExist(contact)) {
             contacts.add(contact);
+        }else{
+            System.out.println("contact "+ contact.getName() + " already exists.");
         }
     }
 
@@ -39,6 +41,8 @@ public class MobilePhone {
         int index = queryName(name);
         if (index != -1) {
             contacts.get(index).setPhoneNumber(newPhoneNumber);
+        }else{
+            System.out.println("contact "+ name + " is not found.");
         }
     }
 
@@ -46,6 +50,8 @@ public class MobilePhone {
         int index = queryName(name);
         if (index != -1) {
             contacts.remove(index);
+        }else{
+            System.out.println("contact "+ name + " is not found.");
         }
     }
 
