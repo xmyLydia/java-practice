@@ -77,6 +77,7 @@ public class MobilePhone {
                 String name = scanner.nextLine();
                 System.out.print("input phoneNumber: ");
                 String phoneNumber = scanner.nextLine();
+                //or contacts.add(Contact.createContact(name, phoneNumber))
                 contacts.add(new Contact(name, phoneNumber));
                 break;
             }
