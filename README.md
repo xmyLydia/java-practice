@@ -16,5 +16,7 @@ fundamental practice for building up strong base and preparation for advanced ja
 14. arrayList (advantage: automatic re-sizing)
 15. arrayList (crud operations), scanner.nextLine() and scanner.nextInt()
 16. arrayList, how to copy ArrayList: 1) addAll 2) initialization with previous one (new ArrayList<>(previousList)), 
-    turn ArrayList into array: toArray(T a) method
+    turn ArrayList into the array: toArray(T a) method
 17. factory method to create a new object
+18. ClassA.method() call Class_a.method and enhance it according to scenario in ClassA. 
+    class_a is a variable of classA (contact and mobilePhone)
