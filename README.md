@@ -19,4 +19,5 @@ fundamental practice for building up strong base and preparation for advanced ja
     turn ArrayList into the array: toArray(T a) method
 17. factory method to create a new object
 18. ClassA.method() call Class_a.method and enhance it according to scenario in ClassA. 
-    class_a is a variable of classA (contact and mobilePhone)
+    class_ a is a variable of classA (contact and mobilePhone)
+19. deal with duplicate in arrayList: indexOf() method's return value
