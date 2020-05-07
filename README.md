@@ -21,3 +21,5 @@ fundamental practice for building up strong base and preparation for advanced ja
 18. ClassA.method() call Class_a.method and enhance it according to scenario in ClassA. 
     class_ a is a variable of classA (contact and mobilePhone)
 19. deal with duplicate in arrayList: indexOf() method's return value
+20. arraylist store object (not primitive type data); primitive vs reference (stored in stack or heap); 
+    autoboxing and unboxing
