@@ -11,6 +11,9 @@ public class Bank {
     private static final int NONEXISTENT_BRANCH_INDEX = -1;
     private ArrayList<Branch> branches = new ArrayList<>();
 
+    public Bank(String bankName) {
+    }
+
     public Bank(ArrayList<Branch> branches) {
         this.branches = branches;
     }
@@ -53,18 +56,33 @@ public class Bank {
         }
     }
 
+    private String getRecordsOfCustomer(Customer customer) {
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(customer.getName()).append(", ");
+        if (customer.getRecords() != null) {
+            ArrayList<Double> records = customer.getRecords();
+            for (Double record : records) {
+                stringBuilder.append(record).append(",");
+            }
+        }
+        return stringBuilder.toString();
+    }
+
+
     public void showCustomersOfBranch(String branchName, boolean showTransactions) {
         int indexOfBranch = findBranchIndex(branchName);
         if (indexOfBranch != NONEXISTENT_BRANCH_INDEX) {
             List<Customer> customersList = branches.get(indexOfBranch).getCustomers();
             if (customersList != null) {
-                String records = branches.get(indexOfBranch).getCustomers().stream()
+                String customerNames = branches.get(indexOfBranch).getCustomers().stream()
                         .map(Customer::getName)
                         .collect(Collectors.joining(", "));
                 if (showTransactions) {
-                    customersList.forEach(customer -> System.out.println(customer.getName() + "," + records));
+                    for (Customer customer : customersList) {
+                        System.out.println(getRecordsOfCustomer(customer));
+                    }
                 } else {
-                    customersList.forEach(customer -> System.out.println(customer.getName()));
+                    System.out.println(customerNames);
                 }
             }
 

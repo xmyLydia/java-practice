@@ -9,6 +9,10 @@ public class Branch {
     private String branchName;
     ArrayList<Customer> customers = new ArrayList<>();
 
+    public Branch(String branchName) {
+        this.branchName = branchName;
+    }
+
     public Branch(String branchName, ArrayList<Customer> customers) {
         this.branchName = branchName;
         this.customers = customers;

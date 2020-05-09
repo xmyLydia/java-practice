@@ -9,6 +9,10 @@ public class Customer {
     private String name;
     ArrayList<Double> records = new ArrayList<>();
 
+    public Customer(String name) {
+        this.name = name;
+    }
+
     public Customer(String name, ArrayList<Double> records) {
         this.name = name;
         this.records = records;
