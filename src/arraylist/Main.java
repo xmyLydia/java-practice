@@ -14,6 +14,7 @@ public class Main {
         // create bank
         Bank bank = new Bank("bank1");
         bank.addBranch(branch);
+        bank.addCustomerToBranch("customer3", "branch1", 300);
 
         //print out information
         bank.showCustomersOfBranch("branch1", true);
