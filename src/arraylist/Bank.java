@@ -47,10 +47,10 @@ public class Bank {
         return NONEXISTENT_BRANCH_INDEX;
     }
 
-    public void addCustomerToBranch(Customer customer, String branchName, double initialTransaction) {
+    public void addCustomerToBranch(String customerName, String branchName, double initialTransaction) {
         int indexOfBranch = findBranchIndex(branchName);
         if (indexOfBranch != NONEXISTENT_BRANCH_INDEX) {
-            branches.get(indexOfBranch).addNewCustomer(customer, initialTransaction);
+            branches.get(indexOfBranch).addNewCustomer(customerName, initialTransaction);
         } else {
             System.out.println("Branch doesn't exist");
         }
@@ -62,7 +62,7 @@ public class Bank {
         if (customer.getRecords() != null) {
             ArrayList<Double> records = customer.getRecords();
             for (Double record : records) {
-                stringBuilder.append(record).append(",");
+                stringBuilder.append(record).append(", ");
             }
         }
         return stringBuilder.toString();
@@ -85,7 +85,6 @@ public class Bank {
                     System.out.println(customerNames);
                 }
             }
-
         }
     }
 }

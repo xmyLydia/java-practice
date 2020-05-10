@@ -34,23 +34,34 @@ public class Branch {
         this.customers = customers;
     }
 
-    public void addNewCustomer(Customer customer, double initialTransaction) {
-        if (!customers.contains(customer)) {
-            addInitialTransactionAmount(customer, initialTransaction);
-            customers.add(customer);
-            System.out.println("customer added");
-        } else {
-            System.out.println("already exists.");
+    public void addNewCustomer(String customerName, double initialTransaction) {
+        Customer customer = new Customer(customerName);
+        customers.add(customer);
+        addInitialTransactionAmount(customerName, initialTransaction);
+        System.out.println("customer added");
+    }
+
+    private Customer findCustomer(String name) {
+        for (Customer customer : customers) {
+            if (customer.getName() != null && customer.getName().equals(name)) {
+                return customer;
+            }
         }
-
+        return null;
     }
 
-    private void addInitialTransactionAmount(Customer customer, double amount) {
-        customer.getRecords().add(amount);
+    private void addInitialTransactionAmount(String customerName, double amount) {
+        Customer customer = findCustomer(customerName);
+        if (customer != null) {
+            customer.getRecords().add(amount);
+        } else {
+            System.out.println("unable to find customer");
+        }
     }
 
-    public void addAdditionalTransaction(Customer customer, double additionalTransaction) {
-        if (customers.contains(customer)) {
+    public void addAdditionalTransaction(String customerName, double additionalTransaction) {
+        Customer customer = findCustomer(customerName);
+        if (customer != null) {
             ArrayList<Double> records =
                     customers.get(customers.indexOf(customer)).getRecords();
             if (records != null) {
