@@ -23,3 +23,5 @@ fundamental practice for building up strong base and preparation for advanced ja
 19. deal with duplicate in arrayList: indexOf() method's return value
 20. arraylist store object (not primitive type data); primitive vs reference (stored in stack or heap); 
     autoboxing and unboxing
+21. linkedList: save more work when add/delete one element from list, arrayList has to move many elements to the next position when saving,
+    arrayList has to move many elements to the previous position when deleting.
