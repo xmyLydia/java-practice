@@ -25,3 +25,4 @@ fundamental practice for building up strong base and preparation for advanced ja
     autoboxing and unboxing
 21. linkedList: save more work when add/delete one element from list, arrayList has to move many elements to the next position when saving,
     arrayList has to move many elements to the previous position when deleting.
+22. iterator & listIterator, insert and remove of linkedList.
