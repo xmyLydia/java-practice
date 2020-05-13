@@ -26,4 +26,4 @@ fundamental practice for building up strong base and preparation for advanced ja
 21. linkedList: save more work when add/delete one element from list, arrayList has to move many elements to the next position when saving,
     arrayList has to move many elements to the previous position when deleting.
 22. iterator & listIterator, insert and remove of linkedList.
-23. listIterator's infinite loop when using iterator.previous()
+23. listIterator's infinite loop when using iterator.previous() and followed by iterator.next() because the implementation of its cursor.
