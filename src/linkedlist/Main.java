@@ -11,11 +11,12 @@ import java.util.Scanner;
  */
 public class Main {
 
-    private static Scanner scanner = new Scanner(System.in);
+    private static final Scanner scanner = new Scanner(System.in);
+    static List<Album> albumList = new ArrayList<>();
+    static List<Song> playList = new LinkedList<>();
 
     public static void main(String[] args) {
-        List<Album> albumList = new ArrayList<>();
-        List<Song> playList = new LinkedList<>();
+
 
         Song song1 = new Song("1", 1);
         Song song2 = new Song("2", 2);
@@ -43,7 +44,8 @@ public class Main {
         boolean flag = true;
         boolean moveForward = true;
         ListIterator listIterator = playList.listIterator();
-        System.out.println("please choose: 1. list all 2. skip forward. 3. skip backward. 4. replay");
+        System.out.println("please choose: 1. list all 2. skip forward. 3. skip backward. 4. replay. 5. delete this one." +
+                "6. quit");
         while (flag) {
             int input = Integer.parseInt(scanner.nextLine());
             switch (input) {
@@ -96,7 +98,9 @@ public class Main {
                     listIterator.remove();
                     System.out.println(name + " removed");
                 }
+                case 6:
                 default: {
+                    flag = false;
                     break;
                 }
             }
