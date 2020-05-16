@@ -27,3 +27,5 @@ fundamental practice for building up strong base and preparation for advanced ja
     arrayList has to move many elements to the previous position when deleting.
 22. iterator & listIterator, insert and remove of linkedList.
 23. listIterator's infinite loop when using iterator.previous() and followed by iterator.next() because the implementation of its cursor.
+24. operation on listIterator needs to be followed by next() or previous(). (such as remove() is called, needs to follow either
+    next() or previous(), otherwise if you use remove() again, error will be thrown.)
