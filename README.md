@@ -30,3 +30,4 @@ fundamental practice for building up strong base and preparation for advanced ja
 24. operation on listIterator needs to be followed by next() or previous(). (such as remove() is called, needs to follow either
     next() or previous(), otherwise if you use remove() again, error will be thrown.)
 25. interface: abstraction, used to group related methods with empty body (which will be implemented in classes)
+26. use extends or interface.
