@@ -4,8 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MusicPlayer implements Savable {
-    String name;
-    List<SavedObject> objectList = new ArrayList<>();
+    private String name;
+    private String material;
+    private double weight;
 
     public String getName() {
         return name;
@@ -15,23 +16,46 @@ public class MusicPlayer implements Savable {
         this.name = name;
     }
 
+    public String getMaterial() {
+        return material;
+    }
 
-    @Override
-    public List<SavedObject> getValues() {
-        return objectList;
+    public void setMaterial(String material) {
+        this.material = material;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
     }
 
     @Override
-    public void populateFields(ArrayList<String> values) {
-        if (values != null) {
-            for (String field : values) {
-                if (field.contains("name")) {
-                    this.setName(field);
-                    break;
-                }
-            }
+    public void populateFields(List<String> list) {
+        if (list != null && !list.isEmpty() && list.size() >= 3) {
+            setName(list.get(0));
+            setMaterial(list.get(1));
+            setWeight(Double.parseDouble(list.get(2)));
         }
     }
 
+    @Override
+    public List<String> generateFieldsList() {
+        List<String> fields = new ArrayList<>();
+        fields.add(0, getName());
+        fields.add(1, getMaterial());
+        fields.add(2, String.valueOf(getWeight()));
+        return fields;
+    }
 
+    @Override
+    public String toString() {
+        return "MusicPlayer{" +
+                "name='" + name + '\'' +
+                ", material='" + material + '\'' +
+                ", weight=" + weight +
+                '}';
+    }
 }

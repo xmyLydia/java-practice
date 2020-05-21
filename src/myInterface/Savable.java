@@ -10,11 +10,11 @@ public interface Savable {
     /**
      * @return all saved objects as list
      */
-    List<SavedObject> getValues();
+    void populateFields(List<String> list);
 
 
     /**
      * @param values populate fields
      */
-    void populateFields(ArrayList<String> values);
+    List<String> generateFieldsList();
 }

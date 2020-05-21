@@ -11,16 +11,23 @@ public class Main {
     public static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
+        MusicPlayer musicPlayer = new MusicPlayer();
+        //get fields values
+        List<String> values = readValues();
 
-        Computer computer = new Computer();
-        save(computer);
-        System.out.println(computer.toString());
+        //populate values to object
+        musicPlayer.populateFields(values);
+        //write to medium by listing all fields values
+        save(musicPlayer);
     }
 
-    private static void save(Computer computer) {
-
-        ArrayList<String> fields = readValues();
-        computer.populateFields(fields);
+    private static void save(Savable savable) {
+        List<String> fields = savable.generateFieldsList();
+        if (fields != null) {
+            for (String field : fields) {
+                System.out.println("save " + field + " to medium");
+            }
+        }
     }
 
     private static ArrayList<String> readValues() {
