@@ -31,4 +31,4 @@ fundamental practice for building up strong base and preparation for advanced ja
     next() or previous(), otherwise if you use remove() again, error will be thrown.)
 25. interface: abstraction, used to group related methods with empty body (which will be implemented in classes)
 26. use extends or interface.
-27. 
+27. use interface as method parameter. Such as Collections.sort(List<T> list)
