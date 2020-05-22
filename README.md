@@ -32,3 +32,5 @@ fundamental practice for building up strong base and preparation for advanced ja
 25. interface: abstraction, used to group related methods with empty body (which will be implemented in classes)
 26. use extends or interface.
 27. use interface as method parameter. Such as Collections.sort(List<T> list)
+28. declare the interface object, and get access to concrete class's method. (scenario: when plan to use variable/methods defined in
+    the interface, which makes code generic)

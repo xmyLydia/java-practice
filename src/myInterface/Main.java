@@ -19,6 +19,10 @@ public class Main {
         musicPlayer.populateFields(values);
         //write to medium by listing all fields values
         save(musicPlayer);
+
+        Savable player = new MusicPlayer();
+        String description = ((MusicPlayer) player).toString();
+        System.out.println(description);
     }
 
     private static void save(Savable savable) {
