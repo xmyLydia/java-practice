@@ -34,3 +34,5 @@ Fundamental practice for building up strong base and preparation for advanced ja
 27. use interface as method parameter. Such as Collections.sort(List<T> list)
 28. declare the interface object, and get access to concrete class's method. (scenario: when plan to use variable/methods defined in
     the interface, which makes code generic).
+29. inner class: when it will be only useful in the outer class, such as keySet in HashMap, it can be static when no 
+    need to access members for outer class. (initialize: GearBox.Gear myGear = myGearBox.new Gear()).
