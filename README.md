@@ -36,3 +36,4 @@ Fundamental practice for building up strong base and preparation for advanced ja
     the interface, which makes code generic).
 29. inner class: when it will be only useful in the outer class, such as keySet in HashMap, it can be static when no 
     need to access members for outer class. (initialize: GearBox.Gear myGear = myGearBox.new Gear()).
+30. inner class:
