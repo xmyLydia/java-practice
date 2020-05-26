@@ -12,7 +12,7 @@ import java.util.Scanner;
  */
 public class Main {
     private static final Scanner scanner = new Scanner(System.in);
-    static List<Album> albumList = new ArrayList<>();
+
     static List<Song> playList = new LinkedList<>();
 
     public static void main(String[] args) {
@@ -27,20 +27,17 @@ public class Main {
         List<Song> songList2 = new ArrayList<>();
         songList2.add(song3);
 
-        Album album1 = new Album(songList1, "album1");
-        Album album2 = new Album(songList2,"album2");
+        Album album1 = new Album("album1");
+        Album album2 = new Album("album2");
         Album.SongList songs = album1.new SongList();
         songs.setSongs(songList1);
 
         Album.SongList songs2 = album2.new SongList();
         songs2.setSongs(songList2);
 
-        albumList.add(album1);
-        albumList.add(album2);
-
-        addSongToPlayList(song1.getTitle(), albumList, playList);
-        addSongToPlayList(song2.getTitle(), albumList, playList);
-        addSongToPlayList(song3.getTitle(), albumList, playList);
+        album1.addSongToPlayList(song1, playList);
+        album1.addSongToPlayList(song2, playList);
+        album2.addSongToPlayList(song3, playList);
 
         menu(playList);
     }
@@ -113,18 +110,5 @@ public class Main {
         }
     }
 
-    private static void addSongToPlayList(String songName, List<Album> albumList, List<Song> playList) {
-        if (albumList != null) {
-            for (Album album : albumList) {
-                if (album.getSongList() != null) {
-                    for (Song song : album.getSongList()) {
-                        if (song.getTitle().equals(songName)) {
-                            playList.add(song);
-                            break;
-                        }
-                    }
-                }
-            }
-        }
-    }
+
 }

@@ -1,6 +1,5 @@
 package InnerClass;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -9,20 +8,54 @@ import java.util.List;
 public class Album {
 
     private String name;
+    private SongList songList;
+
+    public Album(String name) {
+        this.name = name;
+        this.songList = new SongList();
+    }
+
+    public void setSongList(SongList songList) {
+        this.songList = songList;
+    }
+
+    public void addSong(String songName, double duration) {
+        this.songList.add(new Song(songName, duration));
+    }
+
+    void addSongToPlayList(Song song, List<Song> playList) {
+        if (this.songList != null) {
+            int index = this.songList.findSong(song);
+            if (index == -1) {
+                playList.add(song);
+            }
+        }
+    }
 
     class SongList {
-        List<Song> songs = new ArrayList<>();
+        private List<Song> songs;
 
-        public void addSong(String songName, double duration) {
-            Song song = new Song(songName, duration);
-            songs.add(song);
+        public void setSongs(List<Song> songs) {
+            this.songs = songs;
         }
 
-        private int findSong(String songName) {
+        public List<Song> getSongs() {
+            return songs;
+        }
+
+        private void add(Song song) {
+            this.songs.add(song);
+        }
+
+
+        private int findSong(Song song) {
+            if(this.songs == null){
+                return -1;
+            }
             if (songs != null) {
                 for (int i = 0; i < songs.size(); i++) {
                     Song temp = songs.get(i);
-                    if (temp.getTitle() != null && temp.getTitle().equals(songName)) {
+                    if (temp.getTitle() != null && temp.getTitle().equals(song.getTitle())) {
                         return i;
                     }
                 }
@@ -30,24 +63,10 @@ public class Album {
             return -1;
         }
 
-        public List<Song> getSongs() {
-            return songs;
-        }
-
-        public void setSongs(List<Song> songs) {
-            this.songs = songs;
-        }
     }
 
     public List<Song> getSongList() {
-        SongList songList = new SongList();
-        return songList.getSongs();
-    }
-
-    public Album(List<Song> songs, String name) {
-        SongList songList = new SongList();
-        songList.songs = songs;
-        this.name = name;
+        return this.songList.getSongs();
     }
 
     public String getName() {
