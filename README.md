@@ -37,4 +37,4 @@ Fundamental practice for building up strong base and preparation for advanced ja
 29. inner class: when it will be only useful in the outer class, such as keySet in HashMap, it can be static when no 
     need to access members for outer class. (initialize: GearBox.Gear myGear = myGearBox.new Gear()).
 30. local class and anonymous class.
-31. abstract class.
+31. abstract class. Difference between abstract class and interface.
