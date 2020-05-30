@@ -9,6 +9,20 @@ public abstract class ListItem {
         this.value = value;
     }
 
+    public void moveToNext(ListItem item) {
+        this.nextItem = item.nextItem;
+        this.previousItem = item.previousItem;
+    }
+
+    public void moveToPrevious(ListItem item) {
+        this.nextItem = item.nextItem;
+        this.previousItem = item.previousItem;
+    }
+
+    public int compareTo(ListItem item) {
+        return this.getValue() - item.getValue();
+    }
+
     public ListItem getPreviousItem() {
         return previousItem;
     }
