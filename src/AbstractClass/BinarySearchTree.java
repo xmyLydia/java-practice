@@ -32,13 +32,13 @@ public class BinarySearchTree {
         this.listConcrete = listConcrete;
     }
     public ListItem addItem(ListConcrete listConcrete){
-        int compareValue = listConcrete.getCurrent().compareTo(listConcrete) ;
+        int compareValue = listConcrete.compareTo(listConcrete) ;
         if(listConcrete == null){
             listConcrete = new ListConcrete(2);
             return listConcrete;
         }
         if(compareValue < 0){
-            listConcrete.setPreviousItem(addItem(listConcrete.getCurrent().getPrevious()));
+            listConcrete.setPreviousItem(addItem(listConcrete.getPrevious()));
         }else {
             listConcrete.setNextItem(addItem(listConcrete.getNext()));
         }

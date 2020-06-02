@@ -2,7 +2,6 @@ package AbstractClass;
 
 public class ListConcrete extends ListItem {
     private ListConcrete head;
-    private ListConcrete current;
     private ListConcrete next;
     private ListConcrete previous;
 
@@ -34,39 +33,30 @@ public class ListConcrete extends ListItem {
         this.head = head;
     }
 
-    public ListConcrete getCurrent() {
-        return current;
-    }
-
-    public void setCurrent(ListConcrete current) {
-        this.current = current;
-    }
-
     private void insert(ListConcrete item) {
-        if (this.getCurrent().getPreviousItem() != null) {
-            this.getCurrent().getPreviousItem().setNextItem(item);
+        if (this.getPreviousItem() != null) {
+            this.getPreviousItem().setNextItem(item);
         } else {
-            this.getCurrent().setPreviousItem(item);
+            this.setPreviousItem(item);
         }
-        item.setNextItem(getCurrent());
+        item.setNextItem(this);
     }
 
     public void add(ListConcrete item) {
         if (getHead() == null) {
             setHead(item);
         } else {
-            if (item.compareTo(getCurrent()) < 0) {
+            if (item.compareTo(this) < 0) {
                 insert(item);
             } else {
-                while (getCurrent().getNextItem() != null) {
-                    setCurrent(getCurrent().getNext());
-                    if (item.compareTo(getCurrent()) < 0) {
+                while (this.getNextItem() != null) {
+                    if (item.compareTo(this) < 0) {
                         insert(item);
                         break;
                     }
                 }
-                if (getCurrent().getNextItem() == null && item.compareTo(getCurrent()) > 0) {
-                    getCurrent().setNextItem(item);
+                if (this.getNextItem() == null && item.compareTo(this) > 0) {
+                    this.setNextItem(item);
                 }
             }
         }
