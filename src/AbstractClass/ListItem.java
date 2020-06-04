@@ -3,7 +3,7 @@ package AbstractClass;
 public abstract class ListItem {
     ListItem previousItem;
     ListItem nextItem;
-    int value;
+    Object value;
 
     public ListItem(int value) {
         this.value = value;
@@ -13,17 +13,17 @@ public abstract class ListItem {
 
     abstract public ListItem getPreviousItem();
 
-    abstract public void setPreviousItem(ListItem previousItem);
+    abstract public ListItem setPreviousItem(ListItem previousItem);
 
     abstract public ListItem getNextItem();
 
-    abstract public void setNextItem(ListItem nextItem);
+    abstract public ListItem setNextItem(ListItem nextItem);
 
-    public int getValue() {
+    public Object getValue() {
         return value;
     }
 
-    public void setValue(int value) {
+    public void setValue(Object value) {
         this.value = value;
     }
 }

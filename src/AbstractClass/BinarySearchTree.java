@@ -5,15 +5,15 @@ package AbstractClass;
  */
 public class BinarySearchTree {
     String value = "10, 11, 1, 4, 51, 3";
-    ListConcrete listConcrete;
+    Node node;
 
-    public BinarySearchTree(String value, ListConcrete listConcrete) {
+    public BinarySearchTree(String value, Node node) {
         this.value = value;
-        this.listConcrete = listConcrete;
+        this.node = node;
     }
 
-    public BinarySearchTree(ListConcrete listConcrete) {
-        this.listConcrete = listConcrete;
+    public BinarySearchTree(Node node) {
+        this.node = node;
     }
 
     public String getValue() {
@@ -24,24 +24,24 @@ public class BinarySearchTree {
         this.value = value;
     }
 
-    public ListConcrete getListConcrete() {
-        return listConcrete;
+    public Node getNode() {
+        return node;
     }
 
-    public void setListConcrete(ListConcrete listConcrete) {
-        this.listConcrete = listConcrete;
+    public void setNode(Node node) {
+        this.node = node;
     }
-    public ListItem addItem(ListConcrete listConcrete){
-        int compareValue = listConcrete.compareTo(listConcrete) ;
-        if(listConcrete == null){
-            listConcrete = new ListConcrete(2);
-            return listConcrete;
+    public ListItem addItem(Node node){
+        int compareValue = node.compareTo(node) ;
+        if(node == null){
+            node = new Node(2);
+            return node;
         }
         if(compareValue < 0){
-            listConcrete.setPreviousItem(addItem(listConcrete.getPrevious()));
+            node.setPreviousItem(addItem(node.getPrevious()));
         }else {
-            listConcrete.setNextItem(addItem(listConcrete.getNext()));
+            node.setNextItem(addItem(node.getNext()));
         }
-        return listConcrete;
+        return node;
     }
 }
