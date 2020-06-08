@@ -5,7 +5,7 @@ public abstract class ListItem {
     ListItem nextItem;
     Object value;
 
-    public ListItem(int value) {
+    public ListItem(Object value) {
         this.value = value;
     }
 

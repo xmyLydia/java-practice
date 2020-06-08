@@ -4,7 +4,7 @@ package AbstractClass;
  * @author mingyux
  */
 public class BinarySearchTree {
-    String value = "10, 11, 1, 4, 51, 3";
+   /* String value = "10, 11, 1, 4, 51, 3";
     Node node;
 
     public BinarySearchTree(String value, Node node) {
@@ -44,4 +44,5 @@ public class BinarySearchTree {
         }
         return node;
     }
+    */
 }

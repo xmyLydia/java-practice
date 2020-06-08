@@ -2,7 +2,7 @@ package AbstractClass;
 
 public class Node extends ListItem {
 
-    public Node(int value) {
+    public Node(Object value) {
         super(value);
     }
 

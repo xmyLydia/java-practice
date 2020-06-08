@@ -56,11 +56,46 @@ public class MyList implements NodeList {
 
     @Override
     public boolean removeItem(ListItem item) {
+
+        if (item != null) {
+            System.out.println("Deleting item: " + item.getValue());
+        }
+        ListItem currentItem = this.root;
+        while (currentItem != null) {
+            int comparison = currentItem.compareTo(item);
+            if (comparison == 0) {
+                //found it
+                if (this.root == currentItem) {
+                    this.root = currentItem.nextItem;
+                } else {
+                    currentItem.getPreviousItem().setNextItem(currentItem.getNextItem());
+                    if (currentItem.getNextItem() != null) {
+                        currentItem.getNextItem().setPreviousItem(currentItem.getPreviousItem());
+                    }
+                }
+                return true;
+            } else if (comparison < 0) {
+                currentItem = currentItem.getNextItem();
+            } else {
+                //comparison > 0
+                //we are at the item greater than then one we plan to delete
+                //we can't do anything else
+                return false;
+            }
+        }
+        //we have reached the end of the list
         return false;
     }
 
     @Override
     public void traverse(ListItem root) {
-
+        if (root == null) {
+            System.out.println("The list is empty");
+        } else {
+            while (root != null) {
+                System.out.println(root.getValue());
+                root = root.nextItem;
+            }
+        }
     }
 }
