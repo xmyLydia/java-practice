@@ -3,46 +3,70 @@ package AbstractClass;
 /**
  * @author mingyux
  */
-public class BinarySearchTree {
-   /* String value = "10, 11, 1, 4, 51, 3";
-    Node node;
+public class BinarySearchTree implements NodeList {
+    private ListItem root = null;
 
-    public BinarySearchTree(String value, Node node) {
-        this.value = value;
-        this.node = node;
+    public BinarySearchTree(ListItem root) {
+        this.root = root;
     }
 
-    public BinarySearchTree(Node node) {
-        this.node = node;
+    @Override
+    public ListItem getRoot() {
+        return root;
     }
 
-    public String getValue() {
-        return value;
-    }
+    @Override
+    public boolean addItem(ListItem item) {
 
-    public void setValue(String value) {
-        this.value = value;
-    }
-
-    public Node getNode() {
-        return node;
-    }
-
-    public void setNode(Node node) {
-        this.node = node;
-    }
-    public ListItem addItem(Node node){
-        int compareValue = node.compareTo(node) ;
-        if(node == null){
-            node = new Node(2);
-            return node;
+        if (this.root == null) {
+            this.root = item;
+            return true;
         }
-        if(compareValue < 0){
-            node.setPreviousItem(addItem(node.getPrevious()));
-        }else {
-            node.setNextItem(addItem(node.getNext()));
+        ListItem currentItem = this.root;
+        while (currentItem != null) {
+            int comparison = currentItem.compareTo(item);
+            if (comparison < 0) {
+                if (currentItem.getNextItem() != null) {
+                    currentItem = currentItem.getNextItem();
+
+                } else {
+                    currentItem.setNextItem(item);
+                    return true;
+                }
+
+            } else if (comparison > 0) {
+                if (currentItem.getPreviousItem() != null) {
+                    currentItem = currentItem.getPreviousItem();
+                } else {
+                    currentItem.setPreviousItem(item);
+                    return true;
+                }
+
+            } else {
+                //comparison > 0
+                //we are at the item greater than then one we plan to delete
+                //we can't do anything else
+                System.out.println(item.getValue() + " is already added");
+                return false;
+            }
         }
-        return node;
+        //we have reached the end of the list
+        return false;
     }
-    */
+
+    @Override
+    public boolean removeItem(ListItem item) {
+        return false;
+    }
+
+    @Override
+    public void traverse(ListItem root) {
+        if (root != null) {
+            traverse(root.getPreviousItem());
+            System.out.println(root.getValue());
+            traverse(root.getNextItem());
+        }
+    }
+
+
 }
