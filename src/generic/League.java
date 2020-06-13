@@ -1,7 +1,6 @@
 package generic;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -10,6 +9,19 @@ import java.util.List;
  */
 public class League<T extends Team> {
     List<T> teams = new ArrayList<>();
+    private String name;
+
+    public League(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public boolean addTeam(T team) {
         if (teams.contains(team)) {
