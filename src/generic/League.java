@@ -2,13 +2,12 @@ package generic;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 
 /**
  * @author mingyux
  */
 public class League<T extends Team> {
-    List<T> teams = new ArrayList<>();
+    private ArrayList<T> league = new ArrayList<>();
     private String name;
 
     public League(String name) {
@@ -24,20 +23,19 @@ public class League<T extends Team> {
     }
 
     public boolean addTeam(T team) {
-        if (teams.contains(team)) {
+        if (league.contains(team)) {
             System.out.println("team already exists");
             return false;
         } else {
-            teams.add(team);
-            System.out.println(team.getName());
+            league.add(team);
             return true;
         }
     }
 
     public void listTeams() {
-        Collections.sort(teams);
-        for (Team team : teams) {
-            System.out.println(team.getName());
+        Collections.sort(league);
+        for (T t : league) {
+            System.out.println(t.getName() + " : " + t.getScore());
         }
     }
 }

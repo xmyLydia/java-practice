@@ -1,6 +1,9 @@
 package generic;
 
-public class Team<T> implements Comparable<Team> {
+/**
+ * @author mingyux
+ */
+public class Team<T extends Player> implements Comparable<Team<T>> {
     private String name;
     private int score = 0;
 
