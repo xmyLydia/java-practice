@@ -42,4 +42,4 @@ Fundamental practice for building up strong base and preparation for advanced ja
 33. generics in java. Use T in class (Except primitive type).
 34. use <T extends someClass> to restrict the type of T in generics.
 35. naming convention.
-36. package.
+36. package creates namespace, so that class and interface name conflicts are avoided; different restriction on class access.
