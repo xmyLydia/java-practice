@@ -44,3 +44,4 @@ Fundamental practice for building up strong base and preparation for advanced ja
 35. naming convention.
 36. package creates namespace, so that class and interface name conflicts are avoided; different restriction on class access.
 37. use exact package name when importing instead of using asterisk.
+38. generate jar and add external jar in Intellij.
