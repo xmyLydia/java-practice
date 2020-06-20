@@ -4,6 +4,9 @@ package PackageChallenge;
  * @author mingyux
  */
 public class Series {
+    public static void main(String[] args) {
+        System.out.println("test");
+    }
     public int nSum(int n) {
         if (n == 0) {
             return 0;
