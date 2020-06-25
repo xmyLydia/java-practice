@@ -46,3 +46,4 @@ Fundamental practice for building up strong base and preparation for advanced ja
 37. use exact package name when importing instead of using asterisk.
 38. generate jar and add external jar in Intellij.
 39. scope: enclosing block check for nearest declared variable; visibility in Java for inner class's variable.
+40. access modifier.
