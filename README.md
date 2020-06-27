@@ -48,3 +48,4 @@ Fundamental practice for building up strong base and preparation for advanced ja
 39. scope: enclosing block check for nearest declared variable; visibility in Java for inner class's variable.
 40. access modifier.
 41. static variable and static method. Static method is not allowed to access non-static variable.
+42. final variable and final class. XOR operator.
