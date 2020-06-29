@@ -50,3 +50,4 @@ Fundamental practice for building up strong base and preparation for advanced ja
 41. static variable and static method. Static method is not allowed to access non-static variable.
 42. final variable and final class. XOR operator.
 43. final method can't be override by sub class, static block will be executed before constructor.
+44. collection.
