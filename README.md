@@ -51,3 +51,4 @@ Fundamental practice for building up strong base and preparation for advanced ja
 42. final variable and final class. XOR operator.
 43. final method can't be override by sub class, static block will be executed before constructor.
 44. collection. Collections.binarySearch() improve the efficiency compared to brute force search.
+45. Collection.copy() common exception, the difference among copy list methods.
