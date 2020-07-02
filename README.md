@@ -52,4 +52,4 @@ Fundamental practice for building up strong base and preparation for advanced ja
 43. final method can't be override by sub class, static block will be executed before constructor.
 44. collection. Collections.binarySearch() improve the efficiency compared to brute force search.
 45. Collection.copy() common exception, the difference among copy list methods.
-46. Comparator
+46. Comparator method and Comparable class
