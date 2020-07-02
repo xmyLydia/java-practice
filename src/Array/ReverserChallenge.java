@@ -1,9 +1,18 @@
 package Array;
 
+import java.util.Comparator;
+
 /**
  * @author mingyux
  */
 public class ReverserChallenge {
+    static final Comparator<Seat> PRICE_ORDER = new Comparator<Seat>() {
+        @Override
+        public int compare(Seat o1, Seat o2) {
+            return o1.getNumber() - o2.getNumber();
+        }
+    };
+
     public static void main(String[] args) {
         int[] array = new int[]{1, 3, 4, 5, 7, 9};
         // Or use Array.toString(array) to print the array
@@ -29,6 +38,17 @@ public class ReverserChallenge {
     public static void printArray(int[] array) {
         for (int number : array) {
             System.out.println(number);
+        }
+    }
+    public class Seat{
+        private int number;
+
+        public Seat(int number) {
+            this.number = number;
+        }
+
+        public int getNumber() {
+            return number;
         }
     }
 }
