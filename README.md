@@ -53,4 +53,4 @@ Fundamental practice for building up strong base and preparation for advanced ja
 44. collection. Collections.binarySearch() improve the efficiency compared to brute force search.
 45. Collection.copy() common exception, the difference among copy list methods.
 46. Comparator method and Comparable class。
-47. Map, difference between Map and Collection.
+47. Map, difference between Map and Collection. remove and replace methods for different parameters.
