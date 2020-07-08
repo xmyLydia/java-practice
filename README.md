@@ -55,4 +55,5 @@ Fundamental practice for building up strong base and preparation for advanced ja
 46. Comparator method and Comparable class。
 47. Map, difference between Map and Collection. remove and replace methods for different parameters.
 48. Map iteration. Split method.
-49. Immutable class.
+49. Immutable class. Search in intellij with regular expression. The use of private, final in variable and class, how to 
+    refer a mutable object. Avoid setter method.
