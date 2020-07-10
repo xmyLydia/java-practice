@@ -57,3 +57,4 @@ Fundamental practice for building up strong base and preparation for advanced ja
 48. Map iteration. Split method.
 49. Immutable class. Search in intellij with regular expression. The use of private, final in variable and class, how to 
     refer a mutable object. Avoid setter method. [A Strategy for Defining Immutable Objects.](https://docs.oracle.com/javase/tutorial/essential/concurrency/imstrat.html)
+50. Set, addAll method in Set, compressed pointer in Java 7 ([Virtual Machine Performance Enhancements](https://docs.oracle.com/javase/8/docs/technotes/guides/vm/performance-enhancements-7.html))
