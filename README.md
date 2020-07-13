@@ -59,3 +59,5 @@ Fundamental practice for building up strong base and preparation for advanced ja
     refer a mutable object. Avoid setter method. [A Strategy for Defining Immutable Objects.](https://docs.oracle.com/javase/tutorial/essential/concurrency/imstrat.html)
 50. Set, addAll method in Set, compressed pointer in Java 7 ([Virtual Machine Performance Enhancements](https://docs.oracle.com/javase/8/docs/technotes/guides/vm/performance-enhancements-7.html))
 51. HashSet, override equals method in intellij. [hashCode method and equals methods](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-)
+52. When to mark equal and hashcode methods as final in a class: consider behavior of subclass; otherwise
+    in the overridden methods, prevent class and its subclass to be equal.
