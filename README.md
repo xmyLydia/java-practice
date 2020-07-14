@@ -61,3 +61,4 @@ Fundamental practice for building up strong base and preparation for advanced ja
 51. HashSet, override equals method in intellij. [hashCode method and equals methods](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-)
 52. When to mark equal and hashcode methods as final in a class: consider behavior of subclass; otherwise
     in the overridden methods, prevent class and its subclass to be equal.
+53. [Set bulk operations](https://docs.oracle.com/javase/tutorial/collections/interfaces/set.html): addAll(), retainAll(), removeAll(), containAll().
