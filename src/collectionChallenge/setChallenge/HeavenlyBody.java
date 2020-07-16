@@ -4,7 +4,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- *
  * @author dev
  * @date 12/01/2016
  */
@@ -12,12 +11,23 @@ public final class HeavenlyBody {
     private final String name;
     private final double orbitalPeriod;
     private final Set<HeavenlyBody> satellites;
-    private Set<String> bodyTypes;
+    private BodyTypes bodyTypes;
 
-    public HeavenlyBody(String name, double orbitalPeriod) {
+    private enum BodyTypes {
+        //astronomical body orbiting a star
+        PLANET,
+        //astronomical body orbiting Earth
+        MOON,
+        //astronomical object consisting of a luminous spheroid of plasma
+        // held together by its own gravity
+        STAR
+    }
+
+    public HeavenlyBody(String name, double orbitalPeriod, BodyTypes bodyTypes) {
         this.name = name;
         this.orbitalPeriod = orbitalPeriod;
         this.satellites = new HashSet<>();
+        this.bodyTypes = bodyTypes;
     }
 
     public String getName() {
@@ -28,7 +38,7 @@ public final class HeavenlyBody {
         return orbitalPeriod;
     }
 
-    public boolean addMoon(HeavenlyBody moon) {
+    public boolean addSatellite(HeavenlyBody moon) {
         return this.satellites.add(moon);
     }
 
@@ -39,18 +49,16 @@ public final class HeavenlyBody {
 
     @Override
     public boolean equals(Object obj) {
-        if(this == obj) {
+        if (this == obj) {
             return true;
         }
-
-        System.out.println("obj.getClass() is " + obj.getClass());
-        System.out.println("this.getClass() is " + this.getClass());
-        if ((obj == null) || (obj.getClass() != this.getClass())) {
-            return false;
+        if (obj instanceof HeavenlyBody) {
+            HeavenlyBody heavenlyBody = (HeavenlyBody) obj;
+            if (heavenlyBody.getName().equals(this.getName())) {
+                return heavenlyBody.getBodyTypes().equals(this.getBodyTypes());
+            }
         }
-
-        String objName = ((HeavenlyBody) obj).getName();
-        return this.name.equals(objName);
+        return false;
     }
 
     @Override
@@ -59,11 +67,11 @@ public final class HeavenlyBody {
         return this.name.hashCode() + 57;
     }
 
-    public Set<String> getBodyTypes() {
+    public BodyTypes getBodyTypes() {
         return bodyTypes;
     }
 
-    public void setBodyTypes(Set<String> bodyTypes) {
+    public void setBodyTypes(BodyTypes bodyTypes) {
         this.bodyTypes = bodyTypes;
     }
 }
