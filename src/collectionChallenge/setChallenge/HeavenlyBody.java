@@ -7,20 +7,22 @@ import java.util.Set;
  * @author dev
  * @date 12/01/2016
  */
-public final class HeavenlyBody {
+public abstract class HeavenlyBody {
     private final String name;
     private final double orbitalPeriod;
     private final Set<HeavenlyBody> satellites;
-    private BodyTypes bodyTypes;
+    public  BodyTypes bodyTypes;
 
-    private enum BodyTypes {
+    public enum BodyTypes {
         //astronomical body orbiting a star
         PLANET,
         //astronomical body orbiting Earth
         MOON,
         //astronomical object consisting of a luminous spheroid of plasma
         // held together by its own gravity
-        STAR
+        STAR,
+        //a planetary-mass object that does not dominate its region of space
+        DWARF_PLANET
     }
 
     public HeavenlyBody(String name, double orbitalPeriod, BodyTypes bodyTypes) {
@@ -62,9 +64,8 @@ public final class HeavenlyBody {
     }
 
     @Override
-    public int hashCode() {
-        System.out.println("hashcode called");
-        return this.name.hashCode() + 57;
+    public final int hashCode() {
+        return this.name.hashCode() + 57 + this.getBodyTypes().hashCode();
     }
 
     public BodyTypes getBodyTypes() {
@@ -73,5 +74,15 @@ public final class HeavenlyBody {
 
     public void setBodyTypes(BodyTypes bodyTypes) {
         this.bodyTypes = bodyTypes;
+    }
+
+    @Override
+    public String toString() {
+        return "HeavenlyBody{" +
+                "name='" + name + '\'' +
+                ", orbitalPeriod=" + orbitalPeriod +
+                ", satellites=" + satellites +
+                ", bodyTypes=" + bodyTypes +
+                '}';
     }
 }
