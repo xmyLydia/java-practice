@@ -85,4 +85,44 @@ public abstract class HeavenlyBody {
                 ", bodyTypes=" + bodyTypes +
                 '}';
     }
+
+    public static final class Key{
+        private String name;
+        private BodyTypes bodyTypes;
+
+        public Key(String name, BodyTypes bodyTypes) {
+            this.name = name;
+            this.bodyTypes = bodyTypes;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public BodyTypes getBodyTypes() {
+            return bodyTypes;
+        }
+
+        public void setBodyTypes(BodyTypes bodyTypes) {
+            this.bodyTypes = bodyTypes;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            Key key = (Key) o;
+           if(this.getName().equals(key.getName())){
+               return (this.bodyTypes == key.getBodyTypes());
+           }
+           return false;
+        }
+
+        @Override
+        public int hashCode() {
+            return this.name.hashCode() + 57 + this.bodyTypes.hashCode();
+        }
+    }
 }
