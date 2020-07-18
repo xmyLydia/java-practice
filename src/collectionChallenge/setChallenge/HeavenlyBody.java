@@ -8,10 +8,9 @@ import java.util.Set;
  * @date 12/01/2016
  */
 public abstract class HeavenlyBody {
-    private final String name;
     private final double orbitalPeriod;
     private final Set<HeavenlyBody> satellites;
-    public  BodyTypes bodyTypes;
+    private Key key;
 
     public enum BodyTypes {
         //astronomical body orbiting a star
@@ -26,15 +25,11 @@ public abstract class HeavenlyBody {
     }
 
     public HeavenlyBody(String name, double orbitalPeriod, BodyTypes bodyTypes) {
-        this.name = name;
+        this.key = new Key(name, bodyTypes);
         this.orbitalPeriod = orbitalPeriod;
         this.satellites = new HashSet<>();
-        this.bodyTypes = bodyTypes;
     }
 
-    public String getName() {
-        return name;
-    }
 
     public double getOrbitalPeriod() {
         return orbitalPeriod;
@@ -48,6 +43,13 @@ public abstract class HeavenlyBody {
         return new HashSet<>(this.satellites);
     }
 
+    public Key getKey() {
+        return key;
+    }
+
+    public void setKey(Key key) {
+        this.key = key;
+    }
 
     @Override
     public boolean equals(Object obj) {
@@ -56,33 +58,26 @@ public abstract class HeavenlyBody {
         }
         if (obj instanceof HeavenlyBody) {
             HeavenlyBody heavenlyBody = (HeavenlyBody) obj;
-            if (heavenlyBody.getName().equals(this.getName())) {
-                return heavenlyBody.getBodyTypes().equals(this.getBodyTypes());
-            }
+            return this.key.equals(heavenlyBody.getKey());
         }
         return false;
     }
 
     @Override
     public final int hashCode() {
-        return this.name.hashCode() + 57 + this.getBodyTypes().hashCode();
+        return this.key.hashCode();
     }
 
-    public BodyTypes getBodyTypes() {
-        return bodyTypes;
+    public static Key makeKey(String name, BodyTypes bodyTypes) {
+        return new Key(name, bodyTypes);
     }
-
-    public void setBodyTypes(BodyTypes bodyTypes) {
-        this.bodyTypes = bodyTypes;
-    }
-
     @Override
     public String toString() {
         return "HeavenlyBody{" +
-                "name='" + name + '\'' +
+                "name='" + key.name + '\'' +
                 ", orbitalPeriod=" + orbitalPeriod +
                 ", satellites=" + satellites +
-                ", bodyTypes=" + bodyTypes +
+                ", bodyTypes=" + key.bodyTypes +
                 '}';
     }
 
