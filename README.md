@@ -62,4 +62,4 @@ Fundamental practice for building up strong base and preparation for advanced ja
 52. When to mark equal and hashcode methods as final in a class: consider behavior of subclass; otherwise
     in the overridden methods, prevent class and its subclass to be equal.
 53. [Set bulk operations](https://docs.oracle.com/javase/tutorial/collections/interfaces/set.html): addAll(), retainAll(), removeAll(), containAll().
-54. Sorted collection. Collections.unmodifiableMap() method. LinkedHashMap. TreeMap
+54. Sorted collection. Collections.unmodifiableMap() method. LinkedHashMap, TreeMap.
