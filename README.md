@@ -66,4 +66,4 @@ Fundamental practice for building up strong base and preparation for advanced ja
 55. Exception: LBYL: look before you leak (test on null ...). EAFP: easy to ask for forgiveness than permission 
     (with try catch, which has less code and elegant).
 56. Catching specific exception instead of general exception. Stack trace's printing way. Stack trace and call stack.
-57. Catching and throwing exceptions. Multiple catch exceptions.
+57. Catching and throwing exceptions. Multiple catch exceptions. Difference between single pipe and double pipe.
