@@ -67,3 +67,4 @@ Fundamental practice for building up strong base and preparation for advanced ja
     (with try catch, which has less code and elegant).
 56. Catching specific exception instead of general exception. Stack trace's printing way. Stack trace and call stack.
 57. Catching and throwing exceptions. Multiple catch exceptions. Difference between single pipe and double pipe.
+58. IO: sequential data and random access data.
