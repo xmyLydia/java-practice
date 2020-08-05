@@ -68,3 +68,4 @@ Fundamental practice for building up strong base and preparation for advanced ja
 56. Catching specific exception instead of general exception. Stack trace's printing way. Stack trace and call stack.
 57. Catching and throwing exceptions. Multiple catch exceptions. Difference between single pipe and double pipe.
 58. IO: sequential data and random access data. Checked exception and unchecked exception. Close file in a final block.
+59. Try with resource: code without writing close in finally block; enable throwing exception when closing file writer stream.
