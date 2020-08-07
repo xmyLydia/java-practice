@@ -69,4 +69,4 @@ Fundamental practice for building up strong base and preparation for advanced ja
 57. Catching and throwing exceptions. Multiple catch exceptions. Difference between single pipe and double pipe.
 58. IO: sequential data and random access data. Checked exception and unchecked exception. Close file in a final block.
 59. Try with resource: code without writing close in finally block; enable throwing exception when closing file writer stream.
-60. FileReader and closeable. BufferedReader.
+60. FileReader and closeable. BufferedReader. Difference between BufferedReader, FileReader, InputStreamReader.
