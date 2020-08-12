@@ -70,4 +70,4 @@ Fundamental practice for building up strong base and preparation for advanced ja
 58. IO: sequential data and random access data. Checked exception and unchecked exception. Close file in a final block.
 59. Try with resource: code without writing close in finally block; enable throwing exception when closing file writer stream.
 60. FileReader and closeable. BufferedReader. Difference between BufferedReader, FileReader, InputStreamReader.
-61. DataOutputStream, BufferedOutputStream, FileOutputStream.
+61. DataOutputStream, BufferedOutputStream, FileOutputStream. [Bitshift operator.](http://docs.oracle.com/javase/tutorial/java/nutsandbolts/op3.html)
