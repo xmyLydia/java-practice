@@ -72,3 +72,4 @@ Fundamental practice for building up strong base and preparation for advanced ja
 60. FileReader and closeable. BufferedReader. Difference between BufferedReader, FileReader, InputStreamReader.
 61. DataOutputStream, BufferedOutputStream, FileOutputStream. [Bitshift operator.](http://docs.oracle.com/javase/tutorial/java/nutsandbolts/op3.html)
 62. [ObjectInputStream](https://docs.oracle.com/javase/7/docs/api/java/io/ObjectInputStream.html), [ObjectOutputStream](https://docs.oracle.com/javase/7/docs/api/java/io/ObjectOutputStream.html).
+63. Random access file.
