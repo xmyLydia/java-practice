@@ -74,4 +74,5 @@ Fundamental practice for building up strong base and preparation for advanced ja
 62. [ObjectInputStream](https://docs.oracle.com/javase/7/docs/api/java/io/ObjectInputStream.html), [ObjectOutputStream](https://docs.oracle.com/javase/7/docs/api/java/io/ObjectOutputStream.html).
 63. [Random access file](https://docs.oracle.com/javase/7/docs/api/java/io/RandomAccessFile.html#:~:text=A%20random%20access%20file%20behaves,pointer%20past%20the%20bytes%20read.), seek method.
 64. Java NIO. Reading and writing in NIO (Files.write, Files.readAllLine...), NIO vs. IO.
-65. Writing binary file with NIO
+65. Writing binary file with NIO.
+66. Reading file with NIO: absolute/relative read.

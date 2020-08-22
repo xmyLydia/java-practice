@@ -1,6 +1,8 @@
 package NIO;
 
 import java.io.IOException;
+import java.io.RandomAccessFile;
+import java.nio.channels.FileChannel;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.FileSystems;
 import java.nio.file.Files;
@@ -20,6 +22,8 @@ public class ChannelMain {
             Files.write(dataPath, "\nLine 4".getBytes(StandardCharsets.UTF_8), StandardOpenOption.APPEND);
             List<String> lines = Files.readAllLines(dataPath);
             lines.forEach(System.out::println);
+            RandomAccessFile ra = new RandomAccessFile("data.dat", "rwd");
+            FileChannel channel = ra.getChannel();
         } catch (IOException e) {
             e.printStackTrace();
         }
