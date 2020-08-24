@@ -76,4 +76,5 @@ Fundamental practice for building up strong base and preparation for advanced ja
 64. Java NIO. Reading and writing in NIO (Files.write, Files.readAllLine...), NIO vs. IO.
 65. Writing binary file with NIO.
 66. Reading file with NIO: absolute/relative read.
-67. Chained put methods.
+67. Chained put methods. Writing sequentially by using channel.position method + flip method.
+68. Pipes with threads.
