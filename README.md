@@ -80,3 +80,5 @@ Fundamental practice for building up strong base and preparation for advanced ja
 68. Pipes with threads. How to copy file in NIO channel.
 69. Working with file system(copy, delete, move file ...): java.nio.file; Path interface; delimiter in windows: backslash;
     escape the backslash of path when it's in a string that has double quotes.
+70. Check the existence of a file: Files.exists(); copy a file: Files.copy(); move/rename a file: Files.move();
+    delete a file: Files.deleteIfExists()
