@@ -85,4 +85,7 @@ Fundamental practice for building up strong base and preparation for advanced ja
 71. Create a file: Files.createFile; create directory: Files.createDirectories(); file size, last modified time... by using
     Files.readAttributes().
 72. Bitwise or used in catching multiple exception. DirectoryStream for reading directory content. Avoid hard-code separator
-    in the path. Create temp file. Filestore (such as C: in windows)
+    in the path. Create temp file. Filestore (such as C: in windows).
+73. Walk through directory tree: SimpleFileVisitor, Files.walkFileTree().
+74. When to use IO: file contents. When to use NIO: file system such as copy file.
+75. Thread and process; our code runs on main thread or other explicitly created thread. Thread stack and heap.
