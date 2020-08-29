@@ -82,3 +82,7 @@ Fundamental practice for building up strong base and preparation for advanced ja
     escape the backslash of path when it's in a string that has double quotes.
 70. Check the existence of a file: Files.exists(); copy a file: Files.copy(); move/rename a file: Files.move();
     delete a file: Files.deleteIfExists()
+71. Create a file: Files.createFile; create directory: Files.createDirectories(); file size, last modified time... by using
+    Files.readAttributes().
+72. Bitwise or used in catching multiple exception. DirectoryStream for reading directory content. Avoid hard-code separator
+    in the path. Create temp file. Filestore (such as C: in windows)
