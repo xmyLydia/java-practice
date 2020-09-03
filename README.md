@@ -90,4 +90,5 @@ Fundamental practice for building up strong base and preparation for advanced ja
 74. When to use IO: file contents. When to use NIO: file system such as copy file.
 75. Thread and process; our code runs on main thread or other explicitly created thread. Thread stack and heap.
 76. Thread color. Such as ANSI_GREEN, ANSI_PURPLE...
-80. Runnable interface. run() and start(); sleep() method.
+80. Runnable interface. run() and start(); sleep() method; 
+81. There are the interrupt() and join() from one thread to another.
