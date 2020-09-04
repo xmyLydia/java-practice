@@ -92,3 +92,4 @@ Fundamental practice for building up strong base and preparation for advanced ja
 76. Thread color. Such as ANSI_GREEN, ANSI_PURPLE...
 80. Runnable interface. run() and start(); sleep() method; 
 81. There are the interrupt() and join() from one thread to another.
+82. Multiple threads: can't predict which will run first.
