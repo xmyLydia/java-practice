@@ -99,4 +99,4 @@ Fundamental practice for building up strong base and preparation for advanced ja
     how local variable influence the synchronized code block (don't use local variable for synchronized())
     ,[avoid using String or boxed primitives such as Integer, Boolean for synchronization](https://rules.sonarsource.com/java/RSPEC-1860).
 85. Producer and consumer, deadlock, wait(), notify(), notifyAll() methods. [Thread-safe collections](https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#synchronizedList(java.util.List))
- 
+86. Java util concurrent package. 
