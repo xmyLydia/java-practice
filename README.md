@@ -95,3 +95,8 @@ Fundamental practice for building up strong base and preparation for advanced ja
 82. Multiple threads: can't predict which will run first. 
 83. Stack (data is not shared in thread) and heap (data is shared in thread). Thread interfering happens when multiple
     threads are writing to the same resource. 
+84. Synchronization. [Intrinsic lock](https://docs.oracle.com/javase/tutorial/essential/concurrency/locksync.html#:~:text=Every%20object%20has%20an%20intrinsic,when%20it's%20done%20with%20them.),
+    how local variable influence the synchronized code block (don't use local variable for synchronized())
+    ,[avoid using String or boxed primitives such as Integer, Boolean for synchronization](https://rules.sonarsource.com/java/RSPEC-1860).
+85. Producer and consumer, deadlock, wait(), notify(), notifyAll() methods. [Thread-safe collections](https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#synchronizedList(java.util.List))
+ 
