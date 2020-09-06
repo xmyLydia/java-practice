@@ -101,3 +101,8 @@ Fundamental practice for building up strong base and preparation for advanced ja
 85. Producer and consumer, deadlock, wait(), notify(), notifyAll() methods. [Thread-safe collections](https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#synchronizedList(java.util.List))
 86. Java util concurrent package. 
 87. Lock interface, Reentrant lock, lock() and unlock() in the loop. Try Finally in the lock and unlock methods. 
+88. [Executor Service](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html), execute() and shutdown() methods. It suits application with large number of threads.
+89. ArrayBlockingQueue.
+90. Avoid deadlock: try to obtain the lock in the same order.
+91. Thread starvation, setPriority() method is a suggestion to operating system.
+92. Fair Lock: in Reentrant lock it guarantees FIFO. Live lock. Slipped condition. 
