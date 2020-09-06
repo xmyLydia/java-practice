@@ -100,3 +100,4 @@ Fundamental practice for building up strong base and preparation for advanced ja
     ,[avoid using String or boxed primitives such as Integer, Boolean for synchronization](https://rules.sonarsource.com/java/RSPEC-1860).
 85. Producer and consumer, deadlock, wait(), notify(), notifyAll() methods. [Thread-safe collections](https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#synchronizedList(java.util.List))
 86. Java util concurrent package. 
+87. Lock interface, Reentrant lock, lock() and unlock() in the loop. Try Finally in the lock and unlock methods. 
