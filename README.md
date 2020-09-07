@@ -106,3 +106,4 @@ Fundamental practice for building up strong base and preparation for advanced ja
 90. Avoid deadlock: try to obtain the lock in the same order.
 91. Thread starvation, setPriority() method is a suggestion to operating system.
 92. Fair Lock: in Reentrant lock it guarantees FIFO. Live lock. Slipped condition. 
+93. Atomic action, volatile, AtomicInteger, compareAndSet(),
