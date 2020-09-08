@@ -10,10 +10,14 @@ public class BankAccount {
     }
 
     public void deposit(double amount) {
-        balance += amount;
+        synchronized (this) {
+            balance += amount;
+        }
     }
 
     public void withdraw(double amount) {
-        balance -= amount;
+        synchronized (this) {
+            balance -= amount;
+        }
     }
 }
