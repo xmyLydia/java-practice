@@ -108,3 +108,4 @@ Fundamental practice for building up strong base and preparation for advanced ja
 92. Fair Lock: in Reentrant lock it guarantees FIFO. Live lock. Slipped condition. 
 93. Atomic action, volatile, AtomicInteger, compareAndSet().
 94. Lambda expression: argument list, arrow token, body.
+95. Variable outside of anonymous class is final to prevent sync error by the different instance updating that variable.
