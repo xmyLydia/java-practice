@@ -1,6 +1,7 @@
 package lambdaChallenge;
 
 import java.util.function.Function;
+import java.util.function.Supplier;
 
 public class Main {
     public static void main(String[] args) {
@@ -31,22 +32,14 @@ public class Main {
             }
             return returnVal.toString();
         };
-        //String output = lambdaFunction.apply("1234567890");
         System.out.println(everySecondChar(lambdaFunction, "1234567890"));
+
+        Supplier<String> iLoveJava = () -> "I love Java";
+        String supplierResult = iLoveJava.get();
+        System.out.println(supplierResult);
     }
 
-//    public static String everySecondChar(String source) {
-//        StringBuilder returnVal = new StringBuilder();
-//        for (int i = 0; i < source.length(); i++) {
-//            if (i % 2 == 1) {
-//                returnVal.append(source.charAt(i));
-//            }
-//        }
-//        return returnVal.toString();
-
-    //    }
     public static String everySecondChar(Function<String, String> lambdaFunction, String input) {
         return lambdaFunction.apply(input);
     }
-
 }
