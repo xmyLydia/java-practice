@@ -109,3 +109,8 @@ Fundamental practice for building up strong base and preparation for advanced ja
 93. Atomic action, volatile, AtomicInteger, compareAndSet().
 94. Lambda expression: argument list, arrow token, body.
 95. Variable outside of anonymous class is final to prevent sync error by the different instance updating that variable.
+96. effectively final for variable in lambda expression, forEach() method.
+97. Enhanced for loop; predicate test() as condition, write the predicate using lambda expression or anonymous class.
+98. IntPredicate, chain multiple predicates by using and() method. Supplier.
+99. Use Function to avoid using interface and implement it. Chaining Functions by using andThen() method. BiFunction.
+100. Stream, [method reference](https://docs.oracle.com/javase/tutorial/java/javaOO/methodreferences.html), 
