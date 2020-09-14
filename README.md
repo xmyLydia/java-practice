@@ -115,4 +115,4 @@ Fundamental practice for building up strong base and preparation for advanced ja
 99. Use Function to avoid using interface and implement it. Chaining Functions by using andThen() method. BiFunction.
 100. Stream, [method reference](https://docs.oracle.com/javase/tutorial/java/javaOO/methodreferences.html), map() method
     in the stream, terminal operation and intermediate operation, [peek() method](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#peek-java.util.function.Consumer-) used for debug.
-101. flatMap() method, lazily evaluated,
+101. flatMap() method, lazily evaluated.
