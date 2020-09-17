@@ -116,4 +116,6 @@ Fundamental practice for building up strong base and preparation for advanced ja
 100. Stream, [method reference](https://docs.oracle.com/javase/tutorial/java/javaOO/methodreferences.html), map() method
     in the stream, terminal operation and intermediate operation, [peek() method](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#peek-java.util.function.Consumer-) used for debug.
 101. flatMap() method, lazily evaluated.
-102. Carrot boundary matcher, dollar sign $ means characters in the end, 
+102. Carrot boundary matcher, dollar sign $ means characters in the end, [^ ej] means match any character except e and j.
+     [a-fA-F3-8] match a to f, A to F and 3 to 8. It works the same as (?i)[a-f3-8],\\d and \\D, \\s, \t, \\S, \\w, \\W, \\b.
+     [regexpal](https://www.regexpal.com/) used as online regular expression tool.
