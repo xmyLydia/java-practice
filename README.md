@@ -119,4 +119,4 @@ Fundamental practice for building up strong base and preparation for advanced ja
 102. Carrot boundary matcher, dollar sign $ means characters in the end, [^ ej] means match any character except e and j.
      [a-fA-F3-8] match a to f, A to F and 3 to 8. It works the same as (?i)[a-f3-8],\\d and \\D, \\s, \t, \\S, \\w, \\W, \\b.
      [regexpal](https://www.regexpal.com/) used as online regular expression tool.
-103. Quantifier
+103. Quantifier, Matcher and Pattern, Group pattern, greedy quantifier such as *, lazy quantifier such as *?
