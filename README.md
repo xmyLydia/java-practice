@@ -120,4 +120,4 @@ Fundamental practice for building up strong base and preparation for advanced ja
      [a-fA-F3-8] match a to f, A to F and 3 to 8. It works the same as (?i)[a-f3-8],\\d and \\D, \\s, \t, \\S, \\w, \\W, \\b.
      [regexpal](https://www.regexpal.com/) used as online regular expression tool.
 103. Quantifier, Matcher and Pattern, Group pattern, greedy quantifier such as *, lazy quantifier such as *?
-104. Debugger.
+104. Debugger. Step over button, step into button, Force step into button, step out button, drop frame button, run to cursor button.
