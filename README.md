@@ -121,3 +121,4 @@ Fundamental practice for building up strong base and preparation for advanced ja
      [regexpal](https://www.regexpal.com/) used as online regular expression tool.
 103. Quantifier, Matcher and Pattern, Group pattern, greedy quantifier such as *, lazy quantifier such as *?
 104. Debugger. Step over button, step into button, Force step into button, step out button, drop frame button, run to cursor button.
+105. Watch panel. Field watch point.
