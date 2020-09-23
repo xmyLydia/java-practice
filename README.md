@@ -122,3 +122,4 @@ Fundamental practice for building up strong base and preparation for advanced ja
 103. Quantifier, Matcher and Pattern, Group pattern, greedy quantifier such as *, lazy quantifier such as *?
 104. Debugger. Step over button, step into button, Force step into button, step out button, drop frame button, run to cursor button.
 105. Watch panel. Field watch point.
+106. Smart step into in intellij to check specific method when there are multiple methods called in one line. Associate source with its third party library.
