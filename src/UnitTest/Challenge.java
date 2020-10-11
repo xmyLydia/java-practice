@@ -31,26 +31,26 @@ public class Challenge {
     public String removePairs(String source) {
 
         // If length is less than 2, there won't be any pairs
-        if (source.length() < 2) {
+        if (source == null || source.length() < 2) {
             return source;
         }
 
         StringBuilder sb = new StringBuilder();
         char[] string = source.toCharArray();
 
-        for (int i = 0; i < string.length; i++) {
-            if (string[i] != string[i++]) {
+        for (int i = 0; i < string.length - 1; i++) {
+            if (string[i] != string[i + 1]) {
                 sb.append(string[i]);
             }
         }
-
+        sb.append(string[string.length - 1]);
         return sb.toString();
     }
 
     // performs a conversion based on some internal
     // business rule
     public int converter(int a, int b) {
-        return (a/b) + (a * 30) - 2;
+        return (a / b) + (a * 30) - 2;
     }
 
     public String nullIfOddLength(String source) {
