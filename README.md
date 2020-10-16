@@ -125,7 +125,7 @@ Fundamental practice for building up strong base and preparation for advanced ja
 106. Smart step into in intellij to check specific method when there are multiple methods called in one line. Associate source with its third party library.
 107. Junit test. Assert methods. assertArrayEqals() method. AssertThat() method, which is often used, beforeClass && afterClass; Before && After annotations.
 108. Parameterized test for multiple test cases.
-109. Java network. java.net package, intranet, 
+109. Java network. java.net package(low level and high level API), intranet, Ipv4 and Ipv 6, TCP/IP
 
 
 
