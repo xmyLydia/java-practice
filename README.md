@@ -126,6 +126,7 @@ Fundamental practice for building up strong base and preparation for advanced ja
 107. Junit test. Assert methods. assertArrayEqals() method. AssertThat() method, which is often used, beforeClass && afterClass; Before && After annotations.
 108. Parameterized test for multiple test cases.
 109. Java network. java.net package(low level and high level APIs), intranet in company usage, Ipv4 and Ipv 6, TCP/IP, Socket.
+110.
 
 
 
