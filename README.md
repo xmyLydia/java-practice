@@ -129,7 +129,7 @@ Fundamental practice for building up strong base and preparation for advanced ja
 110. Client and server app by using socket. Server handles multiple clients by threads.
 111. Using timeout to block client gets blocked.
 112. TCP: handshaking, used when need response from server, UDP is used when speed is essential and no need for reliable connection, no requirement for getting response 
-     from the server.
+     from the server. Need to choose by use case.
 
 
 
