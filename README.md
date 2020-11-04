@@ -130,6 +130,7 @@ Fundamental practice for building up strong base and preparation for advanced ja
 111. Using timeout to block client gets blocked.
 112. TCP: handshaking, UDP is used when speed is essential and no need for reliable connection, no requirement for getting response 
      from the server.
+113. Difference between URL and URL, what to use in java network programming.
 
 
 
