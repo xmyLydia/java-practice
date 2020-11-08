@@ -131,7 +131,8 @@ Fundamental practice for building up strong base and preparation for advanced ja
 112. TCP: handshaking, used when need response from server, UDP is used when speed is essential and no need for reliable connection, no requirement for getting response 
      from the server. Need to choose by use case.
 113. Difference between URL and URL, what to use in java network programming.
-114.
+114. Absolute URI and relative URI (when a URI doesn't specify the scheme), use URL when access resources,
+     use base URI + relative URI in big project, 
 115.
 
 
