@@ -136,8 +136,8 @@ Fundamental practice for building up strong base and preparation for advanced ja
 115. Use URL to get resource by InputStreamReader.
 116. HTTPUrlConnection, [flickr api](https://www.flickr.com/services/api/misc.overview.html) consists of callable methods
      and some API endpoints. 
-117.
-118.
-
+117. Popular alternatives to HttpUrlConnections: Jetty and Apache HTTPClient. (They're more suggested nowadays)
+118. Java 9, module: container of packages. Normal module and open module.
+119. Module [declarations](https://www.oracle.com/corporate/features/understanding-java-9-modules.html)
 
 
