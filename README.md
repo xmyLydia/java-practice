@@ -134,7 +134,8 @@ Fundamental practice for building up strong base and preparation for advanced ja
 114. Absolute URI and relative URI (when a URI doesn't specify the scheme), use URL when access resources,
      use base URI + relative URI in big project.
 115. Use URL to get resource by InputStreamReader.
-116.
+116. HTTPUrlConnection, [flickr api](https://www.flickr.com/services/api/misc.overview.html) consists of callable methods
+     and some API endpoints. 
 117.
 118.
 
