@@ -139,5 +139,6 @@ Fundamental practice for building up strong base and preparation for advanced ja
 117. Popular alternatives to HttpUrlConnections: Jetty and Apache HTTPClient. (They're more suggested nowadays)
 118. Java 9, module: container of packages. Normal module and open module.
 119. Module [declarations](https://www.oracle.com/corporate/features/understanding-java-9-modules.html)
-
+120. [Google java style guide](https://google.github.io/styleguide/javaguide.html)
+121. [Java operator precedence](http://www.cs.bilkent.edu.tr/~guvenir/courses/CS101/op_precedence.html)
 
